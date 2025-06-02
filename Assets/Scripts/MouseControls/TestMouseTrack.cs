@@ -4,7 +4,7 @@ namespace Assets.Scripts.MouseControls
 {
     public class TestMouseTrack : MonoBehaviour
     {
-        [SerializeField] private MouseHandler mouseHandler;
+        [SerializeField] private MousePositionHandler mouseHandler;
         [SerializeField] private Camera reference;
 
         private void Awake()

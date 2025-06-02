@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d0b8bf4c8f76042b8751dd2ad63997, type: 3}
-  m_Name: Mouse Handler
+  m_Script: {fileID: 11500000, guid: ec3a28b005be52b438ede5d9e8ad1fb0, type: 3}
+  m_Name: Mouse Handler (Factory)
   m_EditorClassIdentifier: 
-  <MousePosition>k__BackingField: {x: 9.817916, y: 1.4786186, z: 10.87536}
+  <MousePosition>k__BackingField: {x: -10, y: -9.109523e-17, z: 13.333334}
   interactables:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128

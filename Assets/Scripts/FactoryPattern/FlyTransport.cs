@@ -7,11 +7,15 @@ namespace Assets.Scripts.FactoryPattern
         public void MoveTransport(Vector3 targetPosition)
         {
             agent.SetDestination(targetPosition);
+
+            Debug.Log($"Viajando a {targetPosition} por aire");
         }
 
         public void SetSpawnPosition(Vector3 spawnPosition)
         {
-            transform.position = spawnPosition;
+            SpawnAtClosestPoint(spawnPosition);
+
+            Debug.Log($"Spawneando en {spawnPosition} modo aire");
         }
     }
 }

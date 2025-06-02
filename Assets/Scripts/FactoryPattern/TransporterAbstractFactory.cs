@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
 namespace Assets.Scripts.FactoryPattern
 {
@@ -21,12 +18,15 @@ namespace Assets.Scripts.FactoryPattern
     public abstract class NavMeshMovement : MonoBehaviour
     {
         [SerializeField] protected NavMeshAgent agent;
+
+        protected void SpawnAtClosestPoint(Vector3 spawnPosition)
+        {
+            NavMeshHit closestHit;
+            if (NavMesh.SamplePosition(spawnPosition, out closestHit, 500, 1))
+            {
+                transform.position = closestHit.position;
+            }
+        }
     }
 
-    public class ClientExample : MonoBehaviour
-    {
-        [SerializeField] protected TransporterAbstractFactory transporterFactory;
-
-        
-    }
 }

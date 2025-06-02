@@ -5,9 +5,13 @@ namespace Assets.Scripts.FactoryPattern
 {
     public class ExampleNavMesh : NavMeshMovement
     {
-        [SerializeField] private MouseHandler mouseHandler;
+        [SerializeField] private MousePositionHandler mouseHandler;
         [SerializeField] private Vector3 currentPosition;
 
+        private void Start()
+        {
+            SpawnAtClosestPoint(transform.position);
+        }
         private void OnEnable()
         {
             mouseHandler.OnMousePosition += SetUpTargetPosition;
