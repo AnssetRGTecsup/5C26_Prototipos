@@ -22,29 +22,29 @@ namespace Assets.Scripts.FactoryPattern
         }
 
 
-        public void ChangeFactory(int i )
+        public void ChangeFactory(int current )
         {
-            
-           
-                switch (i)
-                {
-                    case 0:
-                        transporterFactory = transporterAbstractFactories[0];
-                        return;
-                    case 1:
-                        transporterFactory = transporterAbstractFactories[1];
-                        return;
-                    default:
-                        Debug.Log("no hay mas");
-                        return;
-                }
 
-            
-            /* for( i = i;  i< transporterAbstractFactories.Count; i++)
+
+            /*switch (i)
+            {
+                case 0:
+                    transporterFactory = transporterAbstractFactories[0];
+                    return;
+                case 1:
+                    transporterFactory = transporterAbstractFactories[1];
+                    return;
+                default:
+                    Debug.Log("no hay mas");
+                    return;
+            }*/
+
+
+             for( int i = 0 ;  i< current; i++)
              {
                  transporterFactory = transporterAbstractFactories[i];
-                 Debug.Log("factory n: " + i);
-             }*/
+                Debug.Log("factory n: " + i);
+             }
             // transporterFactory = newFactory;
         }
         public void CreateNewTranport()

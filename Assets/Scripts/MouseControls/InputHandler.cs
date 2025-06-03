@@ -59,13 +59,13 @@ namespace Assets.Scripts.MouseControls
             {
                 
                 
-                    position++;
+                   
                     OnKeyPressed?.Invoke(position);
-                
-                    
-                
-                
-               // Debug.Log(i);
+
+                position++;
+
+
+                // Debug.Log(i);
             }
            
         }
