@@ -18,7 +18,7 @@ namespace Assets.Scripts.FactoryPattern
             bakuganFactory = newFactory;
         }
 
-        public void CreateNewTranport()
+        public void CreateNewBakugan()
         {
             IBakugan newTransport = bakuganFactory.GetBakugan();
 
