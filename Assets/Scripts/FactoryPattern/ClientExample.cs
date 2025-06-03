@@ -6,18 +6,47 @@ namespace Assets.Scripts.FactoryPattern
 {
     public class ClientExample : MonoBehaviour
     {
-        [SerializeField] protected TransporterAbstractFactory transporterFactory;
+        [SerializeField]
+        protected TransporterAbstractFactory transporterFactory;//current
         [SerializeField] protected MousePositionHandler mousePositionHandler;
 
         private List<ITransport> _tranportsList = new List<ITransport>();
 
         private Vector3 _targetPosition;
 
+
+        [SerializeField]protected List<TransporterAbstractFactory> transporterAbstractFactories = new List<TransporterAbstractFactory>();
         public void ChangeCurrentFactory(TransporterAbstractFactory newFactory)
         {
             transporterFactory = newFactory;
         }
 
+
+        public void ChangeFactory(int i )
+        {
+            
+           
+                switch (i)
+                {
+                    case 0:
+                        transporterFactory = transporterAbstractFactories[0];
+                        return;
+                    case 1:
+                        transporterFactory = transporterAbstractFactories[1];
+                        return;
+                    default:
+                        Debug.Log("no hay mas");
+                        return;
+                }
+
+            
+            /* for( i = i;  i< transporterAbstractFactories.Count; i++)
+             {
+                 transporterFactory = transporterAbstractFactories[i];
+                 Debug.Log("factory n: " + i);
+             }*/
+            // transporterFactory = newFactory;
+        }
         public void CreateNewTranport()
         {
             ITransport newTransport = transporterFactory.GetTransport();

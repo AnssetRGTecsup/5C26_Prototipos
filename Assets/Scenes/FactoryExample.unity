@@ -3176,7 +3176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849922875}
-  - component: {fileID: 849922874}
+  - component: {fileID: 849922876}
   m_Layer: 0
   m_Name: TransportFlyFactory
   m_TagString: Untagged
@@ -3184,19 +3184,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &849922874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849922873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272291c2c97dcae43a27d3cdc719eab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTransportPrefab: {fileID: 4228415804572571270, guid: 9de0ae3df6eee444382386c97dc22695, type: 3}
 --- !u!4 &849922875
 Transform:
   m_ObjectHideFlags: 0
@@ -3212,6 +3199,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849922876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849922873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8442b1e2abfbdf4781d0fa66d73879e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingTransportPrefab: {fileID: 3743241063738876417, guid: 9de0ae3df6eee444382386c97dc22695, type: 3}
 --- !u!1001 &851042123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3932,8 +3932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4ad1973d7c357439a0f389732d1d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transporterFactory: {fileID: 849922874}
+  transporterFactory: {fileID: 0}
   mousePositionHandler: {fileID: 11400000, guid: fdf000c2de3b43141a91506810a7fc5d, type: 2}
+  transporterAbstractFactories:
+  - {fileID: 2078569795}
+  - {fileID: 849922876}
 --- !u!4 &948676674
 Transform:
   m_ObjectHideFlags: 0
@@ -6002,6 +6005,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 948676673}
+        m_TargetAssemblyTypeName: Assets.Scripts.FactoryPattern.ClientExample, Assembly-CSharp
+        m_MethodName: ChangeFactory
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1265554914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6091,6 +6109,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cc8e40f0-1ee4-47d5-abcb-316f38ef98f4
     m_ActionName: 'Game/MouseMiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1265554913}
+        m_TargetAssemblyTypeName: Assets.Scripts.MouseControls.InputHandler, Assembly-CSharp
+        m_MethodName: ChangeFactoryType
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 01eaf276-30f4-402b-9445-b5b9755cecbc
+    m_ActionName: 'Game/ChangeFactoryType[/Keyboard/a]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game

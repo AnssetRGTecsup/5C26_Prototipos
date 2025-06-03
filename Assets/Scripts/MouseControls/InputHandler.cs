@@ -19,9 +19,9 @@ namespace Assets.Scripts.MouseControls
         public UnityEvent OnMouseLeftClick;
         public UnityEvent OnMouseMiddleClick;
         public UnityEvent OnMouseRightClick;
-
+        public UnityEvent <int> OnKeyPressed;
         private Vector2 _currentPosition;
-
+        int position = 0;
         public void UpdateMousePosition(InputAction.CallbackContext context)
         {
             _currentPosition = context.ReadValue<Vector2>();
@@ -52,5 +52,23 @@ namespace Assets.Scripts.MouseControls
                 OnMouseRightClick?.Invoke();
             }
         }
+        public void ChangeFactoryType(InputAction.CallbackContext context)
+        {
+           
+            if (context.performed)
+            {
+                
+                
+                    position++;
+                    OnKeyPressed?.Invoke(position);
+                
+                    
+                
+                
+               // Debug.Log(i);
+            }
+           
+        }
+
     }
 }
