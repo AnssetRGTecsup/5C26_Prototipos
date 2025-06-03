@@ -19,6 +19,7 @@ namespace Assets.Scripts.MouseControls
         public UnityEvent OnMouseLeftClick;
         public UnityEvent OnMouseMiddleClick;
         public UnityEvent OnMouseRightClick;
+        public UnityEvent OnEnter;
 
         private Vector2 _currentPosition;
 
@@ -36,7 +37,13 @@ namespace Assets.Scripts.MouseControls
                 OnMouseLeftClick?.Invoke();
             }
         }
-
+        public void UpdateTeKeys(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                OnEnter?.Invoke();
+            }
+        }
         public void UpdateMouseMiddleClick(InputAction.CallbackContext context)
         {
             if (context.performed)
@@ -52,5 +59,6 @@ namespace Assets.Scripts.MouseControls
                 OnMouseRightClick?.Invoke();
             }
         }
+        
     }
 }
