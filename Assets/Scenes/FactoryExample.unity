@@ -3176,7 +3176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849922875}
-  - component: {fileID: 849922874}
+  - component: {fileID: 849922876}
   m_Layer: 0
   m_Name: TransportFlyFactory
   m_TagString: Untagged
@@ -3184,19 +3184,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &849922874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849922873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272291c2c97dcae43a27d3cdc719eab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTransportPrefab: {fileID: 4228415804572571270, guid: 9de0ae3df6eee444382386c97dc22695, type: 3}
 --- !u!4 &849922875
 Transform:
   m_ObjectHideFlags: 0
@@ -3212,6 +3199,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849922876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849922873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8442b1e2abfbdf4781d0fa66d73879e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingTransportPrefab: {fileID: 2647666720076816569, guid: bc5389d32c1dcfc448d273c5d71f85ef, type: 3}
 --- !u!1001 &851042123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3933,7 +3933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundTransportFactory: {fileID: 2078569795}
-  flyTransportFactory: {fileID: 849922874}
+  flyTransportFactory: {fileID: 849922876}
   mousePositionHandler: {fileID: 11400000, guid: fdf000c2de3b43141a91506810a7fc5d, type: 2}
 --- !u!4 &948676674
 Transform:
@@ -9228,7 +9228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272291c2c97dcae43a27d3cdc719eab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTransportPrefab: {fileID: 104250694762439412, guid: d2bc65de546c58a4da772eeb5832bc31, type: 3}
+  groundTransportPrefab: {fileID: 4446791517222429926, guid: 56f2defdd935de34db4fcb5113511557, type: 3}
 --- !u!4 &2078569796
 Transform:
   m_ObjectHideFlags: 0
