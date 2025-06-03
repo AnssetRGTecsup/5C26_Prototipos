@@ -20,6 +20,9 @@ namespace Assets.Scripts.MouseControls
         public UnityEvent OnMouseMiddleClick;
         public UnityEvent OnMouseRightClick;
 
+        public UnityEvent OnPressAKey;
+        public UnityEvent OnPressDKey;
+
         private Vector2 _currentPosition;
 
         public void UpdateMousePosition(InputAction.CallbackContext context)
@@ -50,6 +53,21 @@ namespace Assets.Scripts.MouseControls
             if (context.performed)
             {
                 OnMouseRightClick?.Invoke();
+            }
+        }
+        public void UpdateSpawnGroundKey(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                OnPressAKey?.Invoke();
+            }
+        }
+
+        public void UpdateSpawnFlyKey(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                OnPressDKey?.Invoke();
             }
         }
     }
