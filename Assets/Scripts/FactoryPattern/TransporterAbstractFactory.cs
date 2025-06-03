@@ -6,6 +6,7 @@ namespace Assets.Scripts.FactoryPattern
     public abstract class TransporterAbstractFactory : MonoBehaviour
     {
         public abstract ITransport GetTransport();
+        public abstract string GetFactoryName();
     }
 
     public interface ITransport

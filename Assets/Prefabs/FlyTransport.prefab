@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5828080025596375203}
   - component: {fileID: 4750928972792726530}
   - component: {fileID: 7757815048356058065}
-  - component: {fileID: 4228415804572571270}
+  - component: {fileID: -4669257493590154754}
   m_Layer: 6
   m_Name: FlyTransport
   m_TagString: Untagged
@@ -110,7 +110,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4228415804572571270
+--- !u!114 &-4669257493590154754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8122139528196021284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55bcff20d66500b4ab16eb147e69002f, type: 3}
+  m_Script: {fileID: 11500000, guid: ac33c3cba2a2939468a46a4069bb2330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 7757815048356058065}

@@ -10,5 +10,9 @@ namespace Assets.Scripts.FactoryPattern
         {
             return Instantiate(flyingTransportPrefab);
         }
+        public override string GetFactoryName()
+        {
+            return "Transporte Aereo";
+        }
     }
 }

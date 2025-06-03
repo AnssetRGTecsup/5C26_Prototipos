@@ -9,5 +9,10 @@ namespace Assets.Scripts.FactoryPattern
         {
             return Instantiate(groundTransportPrefab);
         }
+
+        public override string GetFactoryName()
+        {
+            return "Transporte Terrestre";
+        }
     }
 }

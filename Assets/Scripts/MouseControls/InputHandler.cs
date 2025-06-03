@@ -22,6 +22,17 @@ namespace Assets.Scripts.MouseControls
 
         private Vector2 _currentPosition;
 
+        public UnityEvent OnSelectFactory1;
+        public UnityEvent OnSelectFactoryNext;
+
+        public void SelectFactory1(InputAction.CallbackContext context)
+        {
+            if (context.performed) OnSelectFactory1?.Invoke();
+        }
+        public void SelectFactoryNext(InputAction.CallbackContext context)
+        {
+            if (context.performed) OnSelectFactoryNext?.Invoke();
+        }
         public void UpdateMousePosition(InputAction.CallbackContext context)
         {
             _currentPosition = context.ReadValue<Vector2>();
