@@ -1743,6 +1743,7 @@ GameObject:
   - component: {fileID: 379350726}
   - component: {fileID: 379350725}
   - component: {fileID: 379350724}
+  - component: {fileID: 379350728}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1833,6 +1834,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &379350728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379350723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 863eda08b044816449f9ffa658388df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  factory: {fileID: 2078569795}
+  prefabOptions:
+  - {fileID: 104250694762439412, guid: d2bc65de546c58a4da772eeb5832bc31, type: 3}
+  - {fileID: 4228415804572571270, guid: 9de0ae3df6eee444382386c97dc22695, type: 3}
+  - {fileID: 9044433833158082949, guid: 4133b4ad61c7b294a90f1910556bacc7, type: 3}
+  currentPrefabIndex: 0
 --- !u!1 &391296552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5284406570180094706, guid: ad36c3d044d312e44a986a07f2c7f0b2, type: 3}
@@ -1843,6 +1862,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5231053016383350642, guid: 30c819560420f824da028f3502f83728, type: 3}
   m_PrefabInstance: {fileID: 839843375}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &423102183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423102185}
+  - component: {fileID: 423102186}
+  m_Layer: 0
+  m_Name: TransporCuaFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423102185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423102183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &423102186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423102183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac33c3cba2a2939468a46a4069bb2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 3607721102010975042, guid: 4133b4ad61c7b294a90f1910556bacc7, type: 3}
 --- !u!1001 &423488635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3278,7 +3342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849922875}
-  - component: {fileID: 849922874}
+  - component: {fileID: 849922876}
   m_Layer: 0
   m_Name: TransportFlyFactory
   m_TagString: Untagged
@@ -3286,19 +3350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &849922874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849922873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272291c2c97dcae43a27d3cdc719eab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTransportPrefab: {fileID: 4228415804572571270, guid: 9de0ae3df6eee444382386c97dc22695, type: 3}
 --- !u!4 &849922875
 Transform:
   m_ObjectHideFlags: 0
@@ -3314,6 +3365,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849922876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849922873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac33c3cba2a2939468a46a4069bb2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 7757815048356058065, guid: 9de0ae3df6eee444382386c97dc22695, type: 3}
 --- !u!1001 &851042123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4034,7 +4098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4ad1973d7c357439a0f389732d1d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transporterFactory: {fileID: 849922874}
+  transporterFactory: {fileID: 2078569795}
   mousePositionHandler: {fileID: 11400000, guid: fdf000c2de3b43141a91506810a7fc5d, type: 2}
 --- !u!4 &948676674
 Transform:
@@ -6362,7 +6426,7 @@ GameObject:
   - component: {fileID: 1271102876}
   - component: {fileID: 1271102875}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6431,7 +6495,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1271102876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 379350728}
+        m_TargetAssemblyTypeName: ChangePrefab, Assembly-CSharp
+        m_MethodName: ChangePerson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1271102876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9947,6 +10023,7 @@ SceneRoots:
   - {fileID: 705115656}
   - {fileID: 948676674}
   - {fileID: 2078569796}
+  - {fileID: 423102185}
   - {fileID: 849922875}
   - {fileID: 970328679}
   - {fileID: 379350727}
