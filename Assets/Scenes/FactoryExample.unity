@@ -4017,6 +4017,7 @@ MonoBehaviour:
   - {fileID: 1253744918}
   currentFactoryUI: {fileID: 1242700205}
   mousePositionHandler: {fileID: 11400000, guid: fdf000c2de3b43141a91506810a7fc5d, type: 2}
+  inputHandler: {fileID: 1265554913}
 --- !u!4 &948676674
 Transform:
   m_ObjectHideFlags: 0
@@ -4676,7 +4677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedVersion: 0
-  m_AgentTypeID: 0
+  m_AgentTypeID: 287145453
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
@@ -4693,7 +4694,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 9b415aa9c1d283a4da647e5011ff752a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1024367548 stripped
 GameObject:
@@ -6402,6 +6403,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCycleFactory:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelectFactoryAlpha1:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSelectFactoryAlpha2:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1265554914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6491,6 +6501,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cc8e40f0-1ee4-47d5-abcb-316f38ef98f4
     m_ActionName: 'Game/MouseMiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1265554913}
+        m_TargetAssemblyTypeName: Assets.Scripts.MouseControls.InputHandler, Assembly-CSharp
+        m_MethodName: HandleCycleFactoryInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5412b52a-574a-4507-9e8d-5c88f41400bb
+    m_ActionName: 'Game/Next[/Keyboard/tab]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -9570,7 +9596,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Cambiar agente
 
-    <- 1 - 2 - 3 -> | TAB'
+    < TAB >'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10031,63 +10057,6 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
---- !u!1001 &5697701298783873241
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3569989784080131090, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_Name
-      value: tralalelo tralala
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.3642263
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.36422628
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6060852
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.6060851
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233654575618260648, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8fa0b923ef469164da4def1611deac53, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -10109,4 +10078,3 @@ SceneRoots:
   - {fileID: 970328679}
   - {fileID: 1225065162}
   - {fileID: 84181931}
-  - {fileID: 5697701298783873241}
