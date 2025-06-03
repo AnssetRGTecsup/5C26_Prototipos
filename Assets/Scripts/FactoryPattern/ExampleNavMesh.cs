@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.MouseControls;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.FactoryPattern
 {
@@ -12,6 +13,7 @@ namespace Assets.Scripts.FactoryPattern
         {
             SpawnAtClosestPoint(transform.position);
         }
+
         private void OnEnable()
         {
             mouseHandler.OnMousePosition += SetUpTargetPosition;

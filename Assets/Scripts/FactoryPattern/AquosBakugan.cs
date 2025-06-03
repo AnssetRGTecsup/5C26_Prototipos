@@ -2,20 +2,20 @@
 
 namespace Assets.Scripts.FactoryPattern
 {
-    public class GroundTransport : NavMeshMovement, ITransport
+    public class AquosBakugan : NavMeshMovement, IBakugan
     {
-        public void MoveTransport(Vector3 targetPosition)
+        public void LaunchBakugan(Vector3 targetPosition)
         {
             agent.SetDestination(targetPosition);
 
-            Debug.Log($"Viajando a {targetPosition} por suelo");
+            Debug.Log($"Bakugan lanzado a la posicion{targetPosition}");
         }
 
         public void SetSpawnPosition(Vector3 spawnPosition)
         {
             SpawnAtClosestPoint(spawnPosition);
 
-            Debug.Log($"Spawneando en {spawnPosition} modo tierra");
+            Debug.Log($"Aquos Bakugan spawneado en la posicion {spawnPosition}.");
         }
     }
 }

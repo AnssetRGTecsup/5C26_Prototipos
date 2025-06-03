@@ -3,16 +3,16 @@ using UnityEngine.AI;
 
 namespace Assets.Scripts.FactoryPattern
 {
-    public abstract class TransporterAbstractFactory : MonoBehaviour
+    public abstract class BakuganAbstractFactory : MonoBehaviour
     {
-        public abstract ITransport GetTransport();
+        public abstract IBakugan GetBakugan();
     }
 
-    public interface ITransport
+    public interface IBakugan
     {
         public void SetSpawnPosition(Vector3 spawnPosition);
 
-        public void MoveTransport(Vector3 targetPosition);
+        public void LaunchBakugan(Vector3 targetPosition);
     }
 
     public abstract class NavMeshMovement : MonoBehaviour
