@@ -6,13 +6,14 @@ namespace Assets.Scripts.FactoryPattern
 {
     public class ClientExample : MonoBehaviour
     {
-        [SerializeField] protected TransporterAbstractFactory transporterFactory;
-        [SerializeField] protected MousePositionHandler mousePositionHandler;
+        [SerializeField] protected TransporterAbstractFactory groundTransportFactory;
+        [SerializeField] protected TransporterAbstractFactory flyTransportFactory;
+      [SerializeField] protected MousePositionHandler mousePositionHandler;
 
         private List<ITransport> _tranportsList = new List<ITransport>();
 
         private Vector3 _targetPosition;
-
+        /*
         public void ChangeCurrentFactory(TransporterAbstractFactory newFactory)
         {
             transporterFactory = newFactory;
@@ -26,7 +27,25 @@ namespace Assets.Scripts.FactoryPattern
 
             _tranportsList.Add(newTransport);
         }
+        */
 
+        public void CreateGroundTransport()
+        {
+           
+            ITransport newTransport = groundTransportFactory.GetTransport();
+            newTransport.SetSpawnPosition(mousePositionHandler.MousePosition);
+            _tranportsList.Add(newTransport);
+            Debug.Log("Ground Transport Creado");
+        }
+
+        public void CreateFlyTransport()
+        {
+          
+            ITransport newTransport = flyTransportFactory.GetTransport();
+            newTransport.SetSpawnPosition(mousePositionHandler.MousePosition);
+            _tranportsList.Add(newTransport);
+            Debug.Log("Fly Transport Creado");
+        }
         public void SetTargetPoition()
         {
             _targetPosition = mousePositionHandler.MousePosition;

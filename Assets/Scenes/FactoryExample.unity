@@ -2073,7 +2073,7 @@ Transform:
   m_GameObject: {fileID: 500255697}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.218, y: 0, z: 0.673}
+  m_LocalPosition: {x: -1.218, y: 8.79, z: 0.673}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3932,7 +3932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4ad1973d7c357439a0f389732d1d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transporterFactory: {fileID: 849922874}
+  groundTransportFactory: {fileID: 2078569795}
+  flyTransportFactory: {fileID: 849922874}
   mousePositionHandler: {fileID: 11400000, guid: fdf000c2de3b43141a91506810a7fc5d, type: 2}
 --- !u!4 &948676674
 Transform:
@@ -4150,7 +4151,7 @@ MonoBehaviour:
         m_MethodName: SetUpCamera
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1136385242}
+          m_ObjectArgument: {fileID: 328659963}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Camera, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6002,6 +6003,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnPressAKey:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 948676673}
+        m_TargetAssemblyTypeName: Assets.Scripts.FactoryPattern.ClientExample, Assembly-CSharp
+        m_MethodName: CreateGroundTransport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnPressDKey:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 948676673}
+        m_TargetAssemblyTypeName: Assets.Scripts.FactoryPattern.ClientExample, Assembly-CSharp
+        m_MethodName: CreateFlyTransport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1265554914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6091,6 +6122,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cc8e40f0-1ee4-47d5-abcb-316f38ef98f4
     m_ActionName: 'Game/MouseMiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1265554913}
+        m_TargetAssemblyTypeName: Assets.Scripts.MouseControls.InputHandler, Assembly-CSharp
+        m_MethodName: UpdateSpawnGroundKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4158ab8a-32e4-4d45-9243-51227033d916
+    m_ActionName: 'Game/A[/Keyboard/a]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1265554913}
+        m_TargetAssemblyTypeName: Assets.Scripts.MouseControls.InputHandler, Assembly-CSharp
+        m_MethodName: UpdateSpawnFlyKey
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4067fd35-1ba4-40ea-8226-39809beaeb88
+    m_ActionName: 'Game/d[/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
