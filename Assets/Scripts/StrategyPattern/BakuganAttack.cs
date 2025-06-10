@@ -18,6 +18,7 @@ public class BakuganAttack : MonoBehaviour
         ScenaryStrategy scenaryStrategy = GetComponent<ScenaryStrategy>();
         IPasiveAttackStrategy pasiveAttack = scenaryStrategy.GetComponent<IPasiveAttackStrategy>();
         ChangeStrategy(pasiveAttack);
+        Activate();
     }
 
     public Attributes BakuganAttribute

@@ -34,5 +34,7 @@ namespace Assets.Scripts.FactoryPattern
             Vector3 targetPosition = currentPosition;
             agent.SetDestination(targetPosition);
         }
+
+
     }
 }

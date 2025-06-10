@@ -17,5 +17,17 @@ namespace Assets.Scripts.FactoryPattern
 
             Debug.Log($"Aquos Bakugan spawneado en la posicion {spawnPosition}.");
         }
+
+        public void Update()
+        {
+            //if (PathComplete() == true)
+            //{
+            //    BakuganAttack bakuganAttack = GetComponent<BakuganAttack>();
+            //    IPasiveAttackStrategy strategy = GetComponent<ShieldStrategy>();
+            //    bakuganAttack.ChangeStrategy(strategy);
+            //    bakuganAttack.Activate();
+            //}
+            base.Update();
+        }
     }
 }
