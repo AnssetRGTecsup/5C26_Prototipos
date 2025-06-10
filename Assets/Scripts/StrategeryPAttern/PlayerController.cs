@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetAttackStrategy(IAttackStrategy strategy)
     {
-        // Destruir el arma actual
+        
         if (currentWeaponModel != null)
         {
             Destroy(currentWeaponModel);
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
         currentAttackStrategy = strategy;
 
-        // Instanciar el nuevo modelo de arma
+        
         currentWeaponModel = Instantiate(strategy.GetWeaponModel(), weaponHolder);
         currentWeaponModel.transform.localPosition = Vector3.zero;
         currentWeaponModel.transform.localRotation = Quaternion.identity;
