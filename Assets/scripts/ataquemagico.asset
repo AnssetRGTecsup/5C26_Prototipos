@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ataquemagico
   m_EditorClassIdentifier: 
   damage: 10
-  projectilePrefab: {fileID: 9082882615339414894, guid: 63edb9d6ff8c96d468c0396822463cf5, type: 3}
+  projectilePrefab: {fileID: 2984404513322943676, guid: cad1f2b5a43f99942982e5094d34ae85, type: 3}
   launchForce: 20
