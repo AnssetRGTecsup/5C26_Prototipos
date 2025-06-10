@@ -6,7 +6,7 @@ public class test : MonoBehaviour
 
     void Start()
     {
-        Performance performance = new Performance(felixSO);
+        //Performance performance = new Performance(felixSO);
 
         //performance.SetStrategy(new PracticePerformance());
         //performance.Perform();
@@ -14,7 +14,7 @@ public class test : MonoBehaviour
         //performance.SetStrategy(new InterviewPerformance());
         //performance.Perform();
 
-        performance.SetStrategy(new ConcertPerfomace());
-        performance.Perform();
+        //performance.SetStrategy(new ConcertPerfomace());
+        //performance.Perform();
     }
 }

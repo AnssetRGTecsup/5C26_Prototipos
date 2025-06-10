@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: chanbin
   _ability: XD
   _age: 78
+  voiceClip: {fileID: 8300000, guid: 7f3b0997ae979af478d76c05c4dab40e, type: 3}

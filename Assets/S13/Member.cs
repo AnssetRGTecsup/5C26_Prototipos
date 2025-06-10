@@ -7,4 +7,7 @@ public class Member : ScriptableObject
    public string _ability;
    public int _age;
 
+    // cambios despues de las 12:30
+    public AudioClip voiceClip;
+
 }

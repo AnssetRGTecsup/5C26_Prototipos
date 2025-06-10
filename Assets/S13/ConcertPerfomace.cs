@@ -2,27 +2,41 @@
 
 public class ConcertPerfomace : IStrategy
 {
-    public void Execute(Member singer)
+    public void Execute(Member singer, AudioSource audioSource)
     {
         Debug.Log($"{singer._name}, de edad: {singer._age} está usando su habilidad: {singer._ability} en un concierto 🔥");
-        AudioSource audioSource = new AudioSource();
-        audioSource.Play();
+        if (singer.voiceClip != null && audioSource != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = singer.voiceClip;
+            audioSource.Play();
+        }
     }
 }
 public class PracticePerformance : IStrategy
 {
-    public void Execute(Member singer)
+    public void Execute(Member singer, AudioSource audioSource)
     {
         Debug.Log($"{singer._name} está practicando con precisión 🕺");
-        GameObject obj = new GameObject();
-        obj.SetActive(true);
+        if (singer.voiceClip != null && audioSource != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = singer.voiceClip;
+            audioSource.Play();
+        }
     }
 }
 
 public class InterviewPerformance : IStrategy
 {
-    public void Execute(Member singer)
+    public void Execute(Member singer, AudioSource audioSource)
     {
         Debug.Log($"{singer._name} responde preguntas con carisma 🎤");
+        if (singer.voiceClip != null && audioSource != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = singer.voiceClip;
+            audioSource.Play();
+        }
     }
 }

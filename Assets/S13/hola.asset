@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Banchan
   _ability: tilin
   _age: 10
+  voiceClip: {fileID: 8300000, guid: 41b5da597c6b269468802a04ba265790, type: 3}

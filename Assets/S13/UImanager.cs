@@ -7,6 +7,7 @@ public class UImanager : MonoBehaviour
     [SerializeField] private Transform buttonContainer;
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private List<Member> singers;
+    [SerializeField] private AudioSource audioSource;
 
     private Performance currentPerformance;
     void Start()
@@ -21,7 +22,7 @@ public class UImanager : MonoBehaviour
     }
     public void SelectSinger(Member singer)
     {
-        currentPerformance = new Performance(singer);
+        currentPerformance = new Performance(singer, audioSource);
         Debug.Log($"Seleccionado: {singer._name}");
     }
 
