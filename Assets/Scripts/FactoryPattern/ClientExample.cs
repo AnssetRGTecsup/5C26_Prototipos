@@ -146,7 +146,7 @@ namespace Assets.Scripts.FactoryPattern
 
             GameObject transportGO = transportMonoBehaviour.gameObject;
             transportGO.transform.localScale = Vector3.zero;
-            transportGO.transform.DOScale(170f, 0.5f).SetEase(Ease.OutBack);
+            transportGO.transform.DOScale(1.0f, 0.5f).SetEase(Ease.OutBack);
 
             _tranportsList.Add(newTransport); //
         }
