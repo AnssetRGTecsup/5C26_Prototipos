@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 587842759772424830}
   - component: {fileID: 3116240733213081747}
   - component: {fileID: 454487841477896208}
+  - component: {fileID: -5351956974930933191}
+  - component: {fileID: 2514679692424969679}
+  - component: {fileID: -1047223628093713547}
+  - component: {fileID: 3847855457570151536}
   m_Layer: 6
   m_Name: AquosBakugan
   m_TagString: Untagged
@@ -69,6 +73,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 3116240733213081747}
+--- !u!114 &-5351956974930933191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514792924628142379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6bb87921ce24345b763e38582810f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gPower: 450
+  bakuganAttribute: 2
+  isInvulnerable: 0
+--- !u!114 &2514679692424969679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514792924628142379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc48f2564cf26547827c7365b17167a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenaryAttribute: 2
+  extraGPower: 100
+--- !u!114 &-1047223628093713547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514792924628142379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce267f2779cf2243af1839bfa635205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSeconds: 10
+--- !u!114 &3847855457570151536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514792924628142379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ba90868cb785042a9eed2e564694fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeAttribute: 0
 --- !u!1001 &8108313454182729667
 PrefabInstance:
   m_ObjectHideFlags: 0
